@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+<centre> <h3>UDGOSH 2023 Player Registration </h3> </centre>
+
+
+<div>
+  <form action="/action_page.php" name="Udgosh23">
+
+    <label for="Name">Name</label>
+    <input type="text" id="Name" name="Name" placeholder="Name..">
+
+    <label for="Gender">Gender</label>
+    <input type="text" id="Gender" name="Gender" placeholder="Gender..">
+    <box-icon name='male-female'></box-icon>
+    <label for="Email">Email</label>
+    <input type="text" id="Email" name="Email" placeholder="Email..">
+
+    <label for="College Name">College Name</label>
+    <input type="text" id="College Name" name="College Name" placeholder="College Name..">
+
+    <label for="Have you been to UDGOSH Earlier? If Yes share year, sports and Rank.">Have you been to UDGOSH Earlier? If Yes, share year, sports and rank.</label>
+    <input type="text" id="Have you been to UDGOSH Earlier? If Yes share year, sports and Rank." name="Have you been to UDGOSH Earlier? If Yes share year, sports and Rank." placeholder="Have you been to UDGOSH Earlier? If Yes share year, sports and Rank...">
+
+    <label for="Sports">Sports</label>
+    <select id="Sports" name="Sports">
+      <option value="100m">100m </option>
+        <option value="200m">200m </option>
+        <option value="HighJump">HighJump</option>
+        <option value="Hammer Throw">Hammer Throw</option>
+        <option value="400m">400m</option>
+        <option value="400m Hurdles">400m Hurdles</option>
+        <option value="1500m">1500m</option>
+        <option value="Long Jump">Long Jump</option>
+        <option value="4x100m Relay">4x100m Relay</option>
+        <option value="110m Hurdle">110m Hurdle</option>
+        <option value="Discus Throw">Discus Throw</option>
+        <option value="Javelin Throw">Javelin Throw</option>
+        <option value="5000m">5000m</option>
+      <option value="Badminton ">Badminton </option>
+      <option value="Basketball">Basketball</option>
+      <option value="Chess">Chess</option>
+      <option value="Cricket">Cricket</option>
+      <option value="Football">Football</option>
+      <option value="Kabaddi">Kabaddi</option>
+      <option value="Lawn Tennis">Lawn Tennis</option>
+      <option value="Powerlifting">Powerlifting</option>
+      <option value="Squash">Squash</option>
+      <option value="Table Tennis">Table Tennis</option>
+      <option value="Taekwondo">Taekwondo</option>
+      <option value="Ultimate Frisbee">Ultimate Frisbee</option>
+      <option value="Volleyball">Volleyball</option>
+      <option value="Weightlifting">Weightlifting</option>
+    </select>
+
+    <label for="Contact Number">Contact Number</label>
+    <input type="number" id="Contact Number" name="Contact Number" placeholder="Contact Number..">
+  
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwf3M7XBg_TCDowL0vJ1AIYe0O9Wjb2bbXsmTZuCR-spiBd9BVb3eKgfMMyJhFShozB/exec'
+    const form = document.forms['Udgosh23']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html>
+
+
